@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using GCBonusLab15.Models;
+<div class="jumbotron">
+    <h1>Movie Selector</h1>
+    <p class="lead">EZ PZ MOVY SELECTZIE</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">This Does nothing &raquo;</a></p>
+</div>
+<!--<table class="table">
+    <tr>
+        <th>Movie Name</th>
+        <th>Movie Category</th>
+        <th>Movie Description</th>
+        <th>Movie Length</th>
+        <th>Movie Release Date</th>
+    </tr-->
+@foreach (var Movies in ViewBag.MoviesList)
+{
+    <!-- Media middle
+    <div class="media">
+        <div class="media-left media-middle">
+            <img src="~/Content/Images/DaddysHome2.jpg" class="media-object" style="width:60px">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">@Movies.MovieName</h4>
+            <p>@Movies.MovieDesc</p>
+        </div>
+    </div> -->
+  
+    <div>
+        <ul>
+            <li>
+                <img src="~/Content/Images/DaddysHome2.jpg" />
+                <h3>@Movies.MovieName</h3>
+                <p>@Movies.MovieDesc</p>
+            </li>
+        </ul>
+    </div>
+            <!--
+            <tr>
+                <td>
+                    @Movies.MovieName
+                </td>
+                <td>
+                    @Movies.MovieCat
+                </td>
+                <td>
+                    @Movies.MovieDesc
+                </td>
+                <td>
+                    @Movies.MovieLength
+                </td>
+                <td>
+                    @Movies.MovieDate
+                </td>
+            </tr>
+                -->
+            }
+
+            <div class="row">
+                <div class="col-md-4">
+                    <p>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
